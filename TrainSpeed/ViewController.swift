@@ -23,6 +23,11 @@ class ViewController: NSViewController {
         // Do any additional setup after loading the view.
         networkSpinner.displayedWhenStopped = false
     }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        self.view.window!.title = "TrainSpeed - Ephraim Kunz"
+    }
 
     @IBAction func currentTrainChanged(sender: AnyObject) {
         if let textField = sender as? NSTextField{
