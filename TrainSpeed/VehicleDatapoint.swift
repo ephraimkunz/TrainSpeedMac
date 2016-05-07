@@ -15,6 +15,7 @@ class VehicleDatapoint : Object{
     dynamic var validUntil = NSDate()
     dynamic var lineRef = ""
     dynamic var directionRef = ""
+    dynamic var vehicleRef = ""
     dynamic var publishedLineName = ""
     dynamic var location : Location?
     dynamic var bearing : Double = 0.0

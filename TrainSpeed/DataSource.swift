@@ -12,6 +12,7 @@ import RealmSwift
 class DataSource {
     let baseUrl = "http://api.rideuta.com/SIRI/SIRI.svc/VehicleMonitor/ByVehicle?vonwardcalls=true&usertoken=UQFDGBPBEDT"
     let realm = try! Realm()
+    let parser = XMLParser()
     
     func getVehicleDatapoint(vehicleID:String, callback:(VehicleDatapoint) -> Void) -> Void{
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration());
@@ -24,9 +25,13 @@ class DataSource {
             else if let httpResponse = response as? NSHTTPURLResponse {
                 if httpResponse.statusCode == 200 {
                     dispatch_async(dispatch_get_main_queue()){ //Execute the callback on the main thread
-                        let vehicleDatapoint = XMLParser.parseVehicleDatapoint(data!);
-                        self.addToRealm(vehicleDatapoint)
-                        callback(vehicleDatapoint);
+                        if let vehicleDatapoint = self.parser.parseVehicleDatapoint(data!){
+                            self.addToRealm(vehicleDatapoint)
+                            callback(vehicleDatapoint);
+                        }
+                        else{
+                            //Got back a response with no information on this vehicle
+                        }
                     }
                 }
             }
