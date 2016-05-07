@@ -7,10 +7,13 @@
 //
 
 import Foundation
-class DataSource : NSObject{
+import RealmSwift
+
+class DataSource {
     let baseUrl = "http://api.rideuta.com/SIRI/SIRI.svc/VehicleMonitor/ByVehicle?vonwardcalls=true&usertoken=UQFDGBPBEDT"
+    let realm = try! Realm()
     
-    func fetchJSONFromUTA(vehicleID:String, callback:(NSData) -> Void) -> Void{
+    func getVehicleDatapoint(vehicleID:String, callback:(VehicleDatapoint) -> Void) -> Void{
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration());
 
         let url = buildUrl(vehicleID)
@@ -20,8 +23,10 @@ class DataSource : NSObject{
             }
             else if let httpResponse = response as? NSHTTPURLResponse {
                 if httpResponse.statusCode == 200 {
-                    dispatch_async(dispatch_get_main_queue()){ //Make sure we go back to the main thread while updating UI.
-                        callback(data!)
+                    dispatch_async(dispatch_get_main_queue()){ //Execute the callback on the main thread
+                        let vehicleDatapoint = XMLParser.parseVehicleDatapoint(data!);
+                        self.addToRealm(vehicleDatapoint)
+                        callback(vehicleDatapoint);
                     }
                 }
             }
@@ -33,5 +38,11 @@ class DataSource : NSObject{
         let fullString = baseUrl + "&vehicle=\(vehicleID)";
         let url = NSURL(string: fullString);
         return url!;
+    }
+    
+    func addToRealm(realmItem : Object) -> Void{
+        try! realm.write{
+            realm.add(realmItem)
+        }
     }
 }

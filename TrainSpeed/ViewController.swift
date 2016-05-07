@@ -36,9 +36,9 @@ class ViewController: NSViewController {
         
         if(trainId != ""){
             networkSpinner.startAnimation(self)
-            dataSource.fetchJSONFromUTA(trainId){
-                (data: NSData) in
-                self.trainInfoTextView.string = String(data: data, encoding: NSUTF8StringEncoding)
+            dataSource.getVehicleDatapoint(trainId){
+                (datapoint: VehicleDatapoint) in
+                //Do something with the datapoint
                 self.networkSpinner.stopAnimation(self)
             }
         }
