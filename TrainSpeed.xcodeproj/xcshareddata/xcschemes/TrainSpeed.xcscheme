@@ -14,20 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "12F0AD3096EAC4AF3788BC17DDEB5D81"
-               BuildableName = "Pods_TrainSpeed.framework"
-               BlueprintName = "Pods-TrainSpeed"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "1806D2AA1CD976CF0015A5DF"
                BuildableName = "TrainSpeed.app"
                BlueprintName = "TrainSpeed"

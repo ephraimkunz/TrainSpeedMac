@@ -9,11 +9,8 @@ pod 'CorePlot', '~> 2.1'
 end
 
 target 'TrainSpeedTests' do
-pod 'RealmSwift'
-pod 'CorePlot', '~> 2.1'
 end
 
 target 'TrainSpeedUITests' do
-pod 'RealmSwift'
 end
 
