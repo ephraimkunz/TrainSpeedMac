@@ -7,10 +7,12 @@
 //
 
 import Cocoa
+import RealmSwift
 
 class ViewController: NSViewController {
     var trainId = "";
     let dataSource = DataSource();
+    var datapoint = VehicleDatapoint()
 
     @IBOutlet weak var currentTrainTextField: NSTextField!
     @IBOutlet weak var networkSpinner: NSProgressIndicator!
@@ -22,6 +24,8 @@ class ViewController: NSViewController {
 
         // Do any additional setup after loading the view.
         networkSpinner.displayedWhenStopped = false
+        print("Realm configuration path: \(Realm.Configuration.defaultConfiguration.fileURL!)")
+
     }
     
     override func viewDidAppear() {
@@ -37,9 +41,17 @@ class ViewController: NSViewController {
         if(trainId != ""){
             networkSpinner.startAnimation(self)
             dataSource.getVehicleDatapoint(trainId){
-                (datapoint: VehicleDatapoint) in
-                //Do something with the datapoint
-                self.networkSpinner.stopAnimation(self)
+                (datapoint: VehicleDatapoint, error: Error?) in
+                if let error = error{
+                    self.trainInfoTextView.string = "We are unable to track a train for train id \(self.trainId). Error message: \(error.reason)"
+                    self.networkSpinner.stopAnimation(self)
+                }
+                else{
+                    //Do something with the datapoint
+                    self.datapoint = datapoint;
+                    self.networkSpinner.stopAnimation(self)
+                    self.trainInfoTextView.string = "\(datapoint.publishedLineName) - \(datapoint.speed) mph"
+                }
             }
         }
     }

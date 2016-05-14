@@ -12,4 +12,8 @@ import RealmSwift
 class Location : Object{
     dynamic var latitude : Double = 0.0
     dynamic var longitude : Double = 0.0
+    
+    func isValidLocation() -> Bool{
+        return latitude != 0.0 && longitude != 0.0
+    }
 }

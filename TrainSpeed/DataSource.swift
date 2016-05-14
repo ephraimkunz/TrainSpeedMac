@@ -14,7 +14,7 @@ class DataSource {
     let realm = try! Realm()
     let parser = XMLParser()
     
-    func getVehicleDatapoint(vehicleID:String, callback:(VehicleDatapoint) -> Void) -> Void{
+    func getVehicleDatapoint(vehicleID:String, callback:(VehicleDatapoint, Error?) -> Void) -> Void{
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration());
 
         let url = buildUrl(vehicleID)
@@ -26,8 +26,13 @@ class DataSource {
                 if httpResponse.statusCode == 200 {
                     dispatch_async(dispatch_get_main_queue()){ //Execute the callback on the main thread
                         if let vehicleDatapoint = self.parser.parseVehicleDatapoint(data!){
-                            self.addToRealm(vehicleDatapoint)
-                            callback(vehicleDatapoint);
+                            if(vehicleDatapoint.isValidDatapoint()){
+                                self.addToRealm(vehicleDatapoint) //Should this be on the main thread? If performance problems, execute this in the background as well.
+                                callback(vehicleDatapoint, nil)
+                            }
+                            else{
+                                callback(vehicleDatapoint, Error(reason: "Invalid vehicle"))
+                            }
                         }
                         else{
                             //Got back a response with no information on this vehicle

@@ -19,6 +19,8 @@
 		18AE0B011CDE9E3800A902DD /* VehicleDatapoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE0B001CDE9E3800A902DD /* VehicleDatapoint.swift */; };
 		18AE0B031CDEA10200A902DD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE0B021CDEA10200A902DD /* Location.swift */; };
 		18AE0B051CDEA3E500A902DD /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE0B041CDEA3E500A902DD /* XMLParser.swift */; };
+		18F0A2BF1CE76C63006FD12F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0A2BE1CE76C63006FD12F /* Constants.swift */; };
+		18F0A2C11CE76F0D006FD12F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0A2C01CE76F0D006FD12F /* Error.swift */; };
 		83DD708168C6409D129F1850 /* Pods_TrainSpeedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5466C7019DABDF8A391B4386 /* Pods_TrainSpeedUITests.framework */; };
 		FF581719C1DFB777704A9DA1 /* Pods_TrainSpeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0809DD108DD82D724C560C65 /* Pods_TrainSpeed.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +61,8 @@
 		18AE0B001CDE9E3800A902DD /* VehicleDatapoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleDatapoint.swift; sourceTree = "<group>"; };
 		18AE0B021CDEA10200A902DD /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		18AE0B041CDEA3E500A902DD /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
+		18F0A2BE1CE76C63006FD12F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		18F0A2C01CE76F0D006FD12F /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		2C80F708D304E74E80799745 /* Pods-TrainSpeedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeedTests/Pods-TrainSpeedTests.debug.xcconfig"; sourceTree = "<group>"; };
 		42D886094936D27D04F4A21A /* Pods_TrainSpeedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainSpeedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5466C7019DABDF8A391B4386 /* Pods_TrainSpeedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainSpeedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,8 +147,10 @@
 				1806D2B71CD976CF0015A5DF /* Info.plist */,
 				188AF6E01CD99703007AB09B /* DataSource.swift */,
 				18AE0B001CDE9E3800A902DD /* VehicleDatapoint.swift */,
+				18F0A2BE1CE76C63006FD12F /* Constants.swift */,
 				18AE0B021CDEA10200A902DD /* Location.swift */,
 				18AE0B041CDEA3E500A902DD /* XMLParser.swift */,
+				18F0A2C01CE76F0D006FD12F /* Error.swift */,
 			);
 			path = TrainSpeed;
 			sourceTree = "<group>";
@@ -439,10 +445,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F0A2C11CE76F0D006FD12F /* Error.swift in Sources */,
 				18AE0B031CDEA10200A902DD /* Location.swift in Sources */,
 				188AF6E11CD99703007AB09B /* DataSource.swift in Sources */,
 				18AE0B051CDEA3E500A902DD /* XMLParser.swift in Sources */,
 				18AE0B011CDE9E3800A902DD /* VehicleDatapoint.swift in Sources */,
+				18F0A2BF1CE76C63006FD12F /* Constants.swift in Sources */,
 				1806D2B11CD976CF0015A5DF /* ViewController.swift in Sources */,
 				1806D2AF1CD976CF0015A5DF /* AppDelegate.swift in Sources */,
 			);

@@ -17,10 +17,11 @@ class XMLParser : NSObject, NSXMLParserDelegate {
     func parseVehicleDatapoint(data : NSData) -> VehicleDatapoint?{
         let parser = NSXMLParser(data: data)
         parser.delegate = self
-        parser.parse()
-        
         datapoint = VehicleDatapoint()
         location = Location()
+        parser.parse()
+        
+        datapoint?.location = location
         
         return datapoint
     }
