@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		176E8AEB65966267AAB0DE3F /* Pods_TrainSpeedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D886094936D27D04F4A21A /* Pods_TrainSpeedTests.framework */; };
 		1806D2AF1CD976CF0015A5DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1806D2AE1CD976CF0015A5DF /* AppDelegate.swift */; };
 		1806D2B11CD976CF0015A5DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1806D2B01CD976CF0015A5DF /* ViewController.swift */; };
 		1806D2B31CD976CF0015A5DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1806D2B21CD976CF0015A5DF /* Assets.xcassets */; };
@@ -19,10 +18,16 @@
 		18AE0B011CDE9E3800A902DD /* VehicleDatapoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE0B001CDE9E3800A902DD /* VehicleDatapoint.swift */; };
 		18AE0B031CDEA10200A902DD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE0B021CDEA10200A902DD /* Location.swift */; };
 		18AE0B051CDEA3E500A902DD /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE0B041CDEA3E500A902DD /* XMLParser.swift */; };
+		18CABD3F1CEDF13F0066955F /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CABD3D1CEDF13F0066955F /* RealmSwift.framework */; };
+		18CABD401CEDF15A0066955F /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CABD3C1CEDF13F0066955F /* Realm.framework */; };
+		18CABD411CEDF15A0066955F /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18CABD3C1CEDF13F0066955F /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18CABD431CEDF15A0066955F /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18CABD3D1CEDF13F0066955F /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18CABD541CEDF2790066955F /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CABD511CEDF23C0066955F /* Charts.framework */; };
+		18CABD551CEDF2790066955F /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18CABD511CEDF23C0066955F /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18CABD591CEDF9C70066955F /* XYVals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CABD581CEDF9C70066955F /* XYVals.swift */; };
 		18F0A2BF1CE76C63006FD12F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0A2BE1CE76C63006FD12F /* Constants.swift */; };
 		18F0A2C11CE76F0D006FD12F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0A2C01CE76F0D006FD12F /* Error.swift */; };
-		83DD708168C6409D129F1850 /* Pods_TrainSpeedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5466C7019DABDF8A391B4386 /* Pods_TrainSpeedUITests.framework */; };
-		FF581719C1DFB777704A9DA1 /* Pods_TrainSpeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0809DD108DD82D724C560C65 /* Pods_TrainSpeed.framework */; };
+		18F0A2C31CE774BC006FD12F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0A2C21CE774BC006FD12F /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +45,60 @@
 			remoteGlobalIDString = 1806D2AA1CD976CF0015A5DF;
 			remoteInfo = TrainSpeed;
 		};
+		18CABD4C1CEDF23C0066955F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18CABD451CEDF23C0066955F /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
+		18CABD4E1CEDF23C0066955F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18CABD451CEDF23C0066955F /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
+			remoteInfo = "Charts-TV";
+		};
+		18CABD501CEDF23C0066955F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18CABD451CEDF23C0066955F /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65B3F5BF1C7370BE000983D0;
+			remoteInfo = "Charts-OSX";
+		};
+		18CABD521CEDF23C0066955F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18CABD451CEDF23C0066955F /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
+			remoteInfo = ChartsTests;
+		};
+		18CABD561CEDF2790066955F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18CABD451CEDF23C0066955F /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 65B3F5BE1C7370BE000983D0;
+			remoteInfo = "Charts-OSX";
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		18CABD441CEDF15A0066955F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				18CABD551CEDF2790066955F /* Charts.framework in Embed Frameworks */,
+				18CABD431CEDF15A0066955F /* RealmSwift.framework in Embed Frameworks */,
+				18CABD411CEDF15A0066955F /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		0809DD108DD82D724C560C65 /* Pods_TrainSpeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainSpeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1806D2AB1CD976CF0015A5DF /* TrainSpeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainSpeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1806D2AE1CD976CF0015A5DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1806D2B01CD976CF0015A5DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,16 +116,13 @@
 		18AE0B001CDE9E3800A902DD /* VehicleDatapoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleDatapoint.swift; sourceTree = "<group>"; };
 		18AE0B021CDEA10200A902DD /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		18AE0B041CDEA3E500A902DD /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
+		18CABD3C1CEDF13F0066955F /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		18CABD3D1CEDF13F0066955F /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		18CABD451CEDF23C0066955F /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../../../../../../Downloads/Charts/Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		18CABD581CEDF9C70066955F /* XYVals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYVals.swift; sourceTree = "<group>"; };
 		18F0A2BE1CE76C63006FD12F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		18F0A2C01CE76F0D006FD12F /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		2C80F708D304E74E80799745 /* Pods-TrainSpeedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeedTests/Pods-TrainSpeedTests.debug.xcconfig"; sourceTree = "<group>"; };
-		42D886094936D27D04F4A21A /* Pods_TrainSpeedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainSpeedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5466C7019DABDF8A391B4386 /* Pods_TrainSpeedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainSpeedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7463799B0E1816C341B4E79F /* Pods-TrainSpeedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeedUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeedUITests/Pods-TrainSpeedUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		79AE9ADC2690852E2034EA8C /* Pods-TrainSpeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeed/Pods-TrainSpeed.debug.xcconfig"; sourceTree = "<group>"; };
-		8097A69048F83B68C16EFEF9 /* Pods-TrainSpeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeed/Pods-TrainSpeed.release.xcconfig"; sourceTree = "<group>"; };
-		A379811BB4444311ED5E8B1B /* Pods-TrainSpeedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeedTests/Pods-TrainSpeedTests.release.xcconfig"; sourceTree = "<group>"; };
-		D4DE21BD6BF2974D363D4A36 /* Pods-TrainSpeedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeedUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeedUITests/Pods-TrainSpeedUITests.release.xcconfig"; sourceTree = "<group>"; };
+		18F0A2C21CE774BC006FD12F /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +130,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF581719C1DFB777704A9DA1 /* Pods_TrainSpeed.framework in Frameworks */,
+				18CABD541CEDF2790066955F /* Charts.framework in Frameworks */,
+				18CABD401CEDF15A0066955F /* Realm.framework in Frameworks */,
+				18CABD3F1CEDF13F0066955F /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +140,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				176E8AEB65966267AAB0DE3F /* Pods_TrainSpeedTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,26 +147,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83DD708168C6409D129F1850 /* Pods_TrainSpeedUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		109B57CCFF1002F11D614E97 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				79AE9ADC2690852E2034EA8C /* Pods-TrainSpeed.debug.xcconfig */,
-				8097A69048F83B68C16EFEF9 /* Pods-TrainSpeed.release.xcconfig */,
-				2C80F708D304E74E80799745 /* Pods-TrainSpeedTests.debug.xcconfig */,
-				A379811BB4444311ED5E8B1B /* Pods-TrainSpeedTests.release.xcconfig */,
-				7463799B0E1816C341B4E79F /* Pods-TrainSpeedUITests.debug.xcconfig */,
-				D4DE21BD6BF2974D363D4A36 /* Pods-TrainSpeedUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		1806D2A21CD976CE0015A5DF = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +160,7 @@
 				1806D2BF1CD976D00015A5DF /* TrainSpeedTests */,
 				1806D2CA1CD976D00015A5DF /* TrainSpeedUITests */,
 				1806D2AC1CD976CF0015A5DF /* Products */,
-				109B57CCFF1002F11D614E97 /* Pods */,
-				9940B48BD16E7F92CB18E52C /* Frameworks */,
+				607AD0D5E630381B123CCB91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +189,8 @@
 				18AE0B021CDEA10200A902DD /* Location.swift */,
 				18AE0B041CDEA3E500A902DD /* XMLParser.swift */,
 				18F0A2C01CE76F0D006FD12F /* Error.swift */,
+				18F0A2C21CE774BC006FD12F /* HistoryViewController.swift */,
+				18CABD581CEDF9C70066955F /* XYVals.swift */,
 			);
 			path = TrainSpeed;
 			sourceTree = "<group>";
@@ -173,12 +213,23 @@
 			path = TrainSpeedUITests;
 			sourceTree = "<group>";
 		};
-		9940B48BD16E7F92CB18E52C /* Frameworks */ = {
+		18CABD461CEDF23C0066955F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0809DD108DD82D724C560C65 /* Pods_TrainSpeed.framework */,
-				42D886094936D27D04F4A21A /* Pods_TrainSpeedTests.framework */,
-				5466C7019DABDF8A391B4386 /* Pods_TrainSpeedUITests.framework */,
+				18CABD4D1CEDF23C0066955F /* Charts.framework */,
+				18CABD4F1CEDF23C0066955F /* Charts.framework */,
+				18CABD511CEDF23C0066955F /* Charts.framework */,
+				18CABD531CEDF23C0066955F /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		607AD0D5E630381B123CCB91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18CABD451CEDF23C0066955F /* Charts.xcodeproj */,
+				18CABD3C1CEDF13F0066955F /* Realm.framework */,
+				18CABD3D1CEDF13F0066955F /* RealmSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,16 +241,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1806D2D01CD976D00015A5DF /* Build configuration list for PBXNativeTarget "TrainSpeed" */;
 			buildPhases = (
-				AE3EF59BAF193AFBEF0386E2 /* Check Pods Manifest.lock */,
 				1806D2A71CD976CF0015A5DF /* Sources */,
 				1806D2A81CD976CF0015A5DF /* Frameworks */,
 				1806D2A91CD976CF0015A5DF /* Resources */,
-				E5238EF5A352EA613BEE1FF1 /* Embed Pods Frameworks */,
-				C9386C5BAA0C36D2965BBBFF /* Copy Pods Resources */,
+				18CABD441CEDF15A0066955F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				18CABD571CEDF2790066955F /* PBXTargetDependency */,
 			);
 			name = TrainSpeed;
 			productName = TrainSpeed;
@@ -210,12 +260,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1806D2D31CD976D00015A5DF /* Build configuration list for PBXNativeTarget "TrainSpeedTests" */;
 			buildPhases = (
-				4EE6EFA42BDF2E778117B336 /* Check Pods Manifest.lock */,
+				FA493F303D134971C0219465 /* 📦 Check Pods Manifest.lock */,
 				1806D2B81CD976D00015A5DF /* Sources */,
 				1806D2B91CD976D00015A5DF /* Frameworks */,
 				1806D2BA1CD976D00015A5DF /* Resources */,
-				8758FFD9FF71916C717E290B /* Embed Pods Frameworks */,
-				E706C39B23A31D40A205D307 /* Copy Pods Resources */,
+				D929F884103B8F0E367C4819 /* 📦 Embed Pods Frameworks */,
+				2BE2A2818A6007153A66238B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,11 +281,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1806D2D61CD976D00015A5DF /* Build configuration list for PBXNativeTarget "TrainSpeedUITests" */;
 			buildPhases = (
-				144DF1D4FB51216A7FE14585 /* Check Pods Manifest.lock */,
+				59FB10942B896BB676ABFBDF /* 📦 Check Pods Manifest.lock */,
 				1806D2C31CD976D00015A5DF /* Sources */,
 				1806D2C41CD976D00015A5DF /* Frameworks */,
 				1806D2C51CD976D00015A5DF /* Resources */,
-				D829DEBB014717EC22FFF24C /* Copy Pods Resources */,
+				E59BC71EFED6C003C173B7B4 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -281,6 +331,12 @@
 			mainGroup = 1806D2A21CD976CE0015A5DF;
 			productRefGroup = 1806D2AC1CD976CF0015A5DF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 18CABD461CEDF23C0066955F /* Products */;
+					ProjectRef = 18CABD451CEDF23C0066955F /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1806D2AA1CD976CF0015A5DF /* TrainSpeed */,
@@ -289,6 +345,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		18CABD4D1CEDF23C0066955F /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 18CABD4C1CEDF23C0066955F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		18CABD4F1CEDF23C0066955F /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 18CABD4E1CEDF23C0066955F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		18CABD511CEDF23C0066955F /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 18CABD501CEDF23C0066955F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		18CABD531CEDF23C0066955F /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 18CABD521CEDF23C0066955F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1806D2A91CD976CF0015A5DF /* Resources */ = {
@@ -318,14 +405,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		144DF1D4FB51216A7FE14585 /* Check Pods Manifest.lock */ = {
+		2BE2A2818A6007153A66238B /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainSpeedTests/Pods-TrainSpeedTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59FB10942B896BB676ABFBDF /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,29 +435,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		4EE6EFA42BDF2E778117B336 /* Check Pods Manifest.lock */ = {
+		D929F884103B8F0E367C4819 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		8758FFD9FF71916C717E290B /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,44 +450,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainSpeedTests/Pods-TrainSpeedTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AE3EF59BAF193AFBEF0386E2 /* Check Pods Manifest.lock */ = {
+		E59BC71EFED6C003C173B7B4 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C9386C5BAA0C36D2965BBBFF /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainSpeed/Pods-TrainSpeed-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D829DEBB014717EC22FFF24C /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,34 +465,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainSpeedUITests/Pods-TrainSpeedUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E5238EF5A352EA613BEE1FF1 /* Embed Pods Frameworks */ = {
+		FA493F303D134971C0219465 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainSpeed/Pods-TrainSpeed-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E706C39B23A31D40A205D307 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainSpeedTests/Pods-TrainSpeedTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -449,8 +491,10 @@
 				18AE0B031CDEA10200A902DD /* Location.swift in Sources */,
 				188AF6E11CD99703007AB09B /* DataSource.swift in Sources */,
 				18AE0B051CDEA3E500A902DD /* XMLParser.swift in Sources */,
+				18CABD591CEDF9C70066955F /* XYVals.swift in Sources */,
 				18AE0B011CDE9E3800A902DD /* VehicleDatapoint.swift in Sources */,
 				18F0A2BF1CE76C63006FD12F /* Constants.swift in Sources */,
+				18F0A2C31CE774BC006FD12F /* HistoryViewController.swift in Sources */,
 				1806D2B11CD976CF0015A5DF /* ViewController.swift in Sources */,
 				1806D2AF1CD976CF0015A5DF /* AppDelegate.swift in Sources */,
 			);
@@ -484,6 +528,11 @@
 			isa = PBXTargetDependency;
 			target = 1806D2AA1CD976CF0015A5DF /* TrainSpeed */;
 			targetProxy = 1806D2C81CD976D00015A5DF /* PBXContainerItemProxy */;
+		};
+		18CABD571CEDF2790066955F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Charts-OSX";
+			targetProxy = 18CABD561CEDF2790066955F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -583,10 +632,14 @@
 		};
 		1806D2D11CD976D00015A5DF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79AE9ADC2690852E2034EA8C /* Pods-TrainSpeed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TrainSpeed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ephraimhowardkunz.TrainSpeed;
@@ -596,10 +649,14 @@
 		};
 		1806D2D21CD976D00015A5DF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8097A69048F83B68C16EFEF9 /* Pods-TrainSpeed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TrainSpeed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ephraimhowardkunz.TrainSpeed;
@@ -609,7 +666,6 @@
 		};
 		1806D2D41CD976D00015A5DF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C80F708D304E74E80799745 /* Pods-TrainSpeedTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -623,7 +679,6 @@
 		};
 		1806D2D51CD976D00015A5DF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A379811BB4444311ED5E8B1B /* Pods-TrainSpeedTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -637,7 +692,6 @@
 		};
 		1806D2D71CD976D00015A5DF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7463799B0E1816C341B4E79F /* Pods-TrainSpeedUITests.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TrainSpeedUITests/Info.plist;
@@ -650,7 +704,6 @@
 		};
 		1806D2D81CD976D00015A5DF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4DE21BD6BF2974D363D4A36 /* Pods-TrainSpeedUITests.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TrainSpeedUITests/Info.plist;

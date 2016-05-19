@@ -35,6 +35,8 @@ class XMLParser : NSObject, NSXMLParserDelegate {
         switch currentParseElement {
         case "ResponseTimestamp":
             datapoint?.timestamp = parseDateFromString(string)
+            let timestampRaw = datapoint?.timestamp.timeIntervalSince1970
+            datapoint?.timestampRaw = timestampRaw!
             
         case "ValidUntil":
             datapoint?.validUntil = parseDateFromString(string)

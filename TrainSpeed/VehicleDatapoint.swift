@@ -21,6 +21,7 @@ class VehicleDatapoint : Object{
     dynamic var bearing : Double = 0.0
     dynamic var speed : Double = 0.0
     dynamic var destinationName = ""
+    dynamic var timestampRaw : Double = 0.0
     
     func isValidDatapoint() -> Bool{
         return vehicleRef != "" && location!.isValidLocation()

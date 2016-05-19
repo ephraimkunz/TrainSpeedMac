@@ -32,6 +32,13 @@ class ViewController: NSViewController {
         super.viewDidAppear()
         self.view.window!.title = "TrainSpeed - Ephraim Kunz"
     }
+    
+    override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "toHistoryViewController"){
+            let hist = segue.destinationController as! HistoryViewController
+            hist.vehicleId = trainId
+        }
+    }
 
     @IBAction func currentTrainChanged(sender: AnyObject) {
         if let textField = sender as? NSTextField{

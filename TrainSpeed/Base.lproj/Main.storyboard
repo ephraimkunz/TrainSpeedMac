@@ -735,6 +735,16 @@
                                     <action selector="currentTrainChanged:" target="XfG-lQ-9wD" id="cSv-Vp-56K"/>
                                 </connections>
                             </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2mv-nC-eeG">
+                                <rect key="frame" x="24" y="23" width="84" height="32"/>
+                                <buttonCell key="cell" type="push" title="History" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pf0-uC-A5W">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="drc-Cn-iHC" kind="modal" identifier="toHistoryViewController" id="uZf-Mu-PUj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="RC7-s2-ItN" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="90" id="2SB-EK-mlA"/>
@@ -743,10 +753,12 @@
                             <constraint firstItem="7kx-zb-JYL" firstAttribute="centerX" secondItem="RC7-s2-ItN" secondAttribute="centerX" id="OMV-eO-n8i"/>
                             <constraint firstAttribute="trailing" secondItem="RC7-s2-ItN" secondAttribute="trailing" constant="40" id="OZS-bR-x6Y"/>
                             <constraint firstItem="NOw-k5-WEy" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="30" id="RkR-0L-MFQ"/>
+                            <constraint firstItem="2mv-nC-eeG" firstAttribute="leading" secondItem="YAh-8o-OYX" secondAttribute="leading" id="c02-Yf-DIz"/>
                             <constraint firstItem="Obh-z0-L7h" firstAttribute="trailing" secondItem="RC7-s2-ItN" secondAttribute="trailing" id="dsc-pM-4OU"/>
                             <constraint firstItem="RC7-s2-ItN" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="130" id="fst-Qe-6Z3"/>
                             <constraint firstAttribute="bottom" secondItem="RC7-s2-ItN" secondAttribute="bottom" constant="40" id="g3L-bI-Wwm"/>
                             <constraint firstItem="Obh-z0-L7h" firstAttribute="centerY" secondItem="7kx-zb-JYL" secondAttribute="centerY" id="h70-qZ-XPY"/>
+                            <constraint firstAttribute="bottom" secondItem="2mv-nC-eeG" secondAttribute="bottom" constant="30" id="iBz-mv-H7n"/>
                             <constraint firstItem="YAh-8o-OYX" firstAttribute="top" secondItem="RC7-s2-ItN" secondAttribute="top" id="lZm-Fo-Fl1"/>
                             <constraint firstItem="YAh-8o-OYX" firstAttribute="leading" secondItem="NOw-k5-WEy" secondAttribute="leading" id="pxS-Qv-gha"/>
                         </constraints>
@@ -761,6 +773,33 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="241" y="686"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="mWZ-kQ-asV">
+            <objects>
+                <viewController id="drc-Cn-iHC" customClass="HistoryViewController" customModule="TrainSpeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="5ee-fe-kaR">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="hab-rf-U8u" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="20" width="410" height="260"/>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="hab-rf-U8u" firstAttribute="top" secondItem="5ee-fe-kaR" secondAttribute="top" constant="20" symbolic="YES" id="3eu-M3-m6e"/>
+                            <constraint firstItem="hab-rf-U8u" firstAttribute="leading" secondItem="5ee-fe-kaR" secondAttribute="leading" constant="20" symbolic="YES" id="47r-yN-KFP"/>
+                            <constraint firstAttribute="trailing" secondItem="hab-rf-U8u" secondAttribute="trailing" constant="20" symbolic="YES" id="abT-5h-U78"/>
+                            <constraint firstAttribute="bottom" secondItem="hab-rf-U8u" secondAttribute="bottom" constant="20" symbolic="YES" id="hcy-g3-Dvx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lineChartView" destination="hab-rf-U8u" id="CcO-Ot-pVX"/>
+                    </connections>
+                </viewController>
+                <customObject id="zR7-km-fDU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="235" y="1141"/>
         </scene>
     </scenes>
 </document>

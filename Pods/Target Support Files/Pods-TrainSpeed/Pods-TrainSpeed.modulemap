@@ -1,6 +1,0 @@
-framework module Pods_TrainSpeed {
-  umbrella header "Pods-TrainSpeed-umbrella.h"
-
-  export *
-  module * { export * }
-}
