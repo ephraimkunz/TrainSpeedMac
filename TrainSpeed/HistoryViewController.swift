@@ -19,16 +19,27 @@ class HistoryViewController : NSViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        self.lineChartView.gridBackgroundColor = NSUIColor.whiteColor()
+        self.lineChartView.xAxis.labelPosition = .Bottom
+        self.lineChartView.xAxis.labelRotationAngle = -90
+        self.lineChartView.descriptionText = "Speed vs Time for Train \(vehicleId!)"
+        self.lineChartView.legend.drawInside = true
+        setChartData()
+        
+    
+    }
+    
+    func setChartData() -> Void{
         let xyVals = getChartXYVals()
         let dataEntries: [ChartDataEntry] = xyVals.yDataEntries
         let dataset = LineChartDataSet(yVals: dataEntries, label: "Speed")
+        
+        dataset.setCircleColor(NSUIColor.redColor())
+        dataset.setColor(NSUIColor.redColor())
+        
         let data = LineChartData(xVals: xyVals.xVals, dataSet: dataset)
         
         self.lineChartView.data = data
-        self.lineChartView.gridBackgroundColor = NSUIColor.whiteColor()
-        
-        self.lineChartView.descriptionText = "Speed vs Time for Train \(vehicleId!)"
     }
     
     func getChartXYVals() -> XYVals{
