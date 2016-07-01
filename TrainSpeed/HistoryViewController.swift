@@ -24,8 +24,6 @@ class HistoryViewController : NSViewController{
         self.lineChartView.xAxis.labelRotationAngle = -90
         self.lineChartView.descriptionText = "Speed vs Time for Train \(vehicleId!)"
         setChartData()
-        
-    
     }
     
     func setChartData() -> Void{

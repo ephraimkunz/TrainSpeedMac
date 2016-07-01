@@ -13,7 +13,9 @@ class ViewController: NSViewController {
     var trainId = "";
     let dataSource = DataSource();
     var datapoint = VehicleDatapoint()
+    var timer = NSTimer()
 
+    @IBOutlet weak var stopUpdatingButton: NSButtonCell!
     @IBOutlet weak var currentTrainTextField: NSTextField!
     @IBOutlet weak var networkSpinner: NSProgressIndicator!
     @IBOutlet var trainInfoTextView: NSTextView!
@@ -25,7 +27,7 @@ class ViewController: NSViewController {
         // Do any additional setup after loading the view.
         networkSpinner.displayedWhenStopped = false
         print("Realm configuration path: \(Realm.Configuration.defaultConfiguration.fileURL!)")
-
+        stopUpdatingButton.enabled = false
     }
     
     override func viewDidAppear() {
@@ -58,10 +60,19 @@ class ViewController: NSViewController {
                     self.datapoint = datapoint;
                     self.networkSpinner.stopAnimation(self)
                     self.trainInfoTextView.string = "\(datapoint.publishedLineName) - \(datapoint.speed) mph"
+                    
+                    //Set up the auto refresh timer
+                    self.timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: #selector(ViewController.currentTrainChanged(_:)), userInfo: nil, repeats: false)
+                    self.stopUpdatingButton.enabled = true
+                    
                 }
             }
         }
     }
 
+    @IBAction func stopUpdatingTapped(sender: AnyObject) {
+        self.timer.invalidate()
+        self.stopUpdatingButton.enabled = false
+    }
 }
 
