@@ -23,7 +23,6 @@ class HistoryViewController : NSViewController{
         self.lineChartView.xAxis.labelPosition = .Bottom
         self.lineChartView.xAxis.labelRotationAngle = -90
         self.lineChartView.descriptionText = "Speed vs Time for Train \(vehicleId!)"
-        self.lineChartView.legend.drawInside = true
         setChartData()
         
     

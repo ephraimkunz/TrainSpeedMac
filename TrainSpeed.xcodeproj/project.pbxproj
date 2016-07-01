@@ -22,12 +22,13 @@
 		18CABD401CEDF15A0066955F /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CABD3C1CEDF13F0066955F /* Realm.framework */; };
 		18CABD411CEDF15A0066955F /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18CABD3C1CEDF13F0066955F /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		18CABD431CEDF15A0066955F /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18CABD3D1CEDF13F0066955F /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18CABD541CEDF2790066955F /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CABD511CEDF23C0066955F /* Charts.framework */; };
-		18CABD551CEDF2790066955F /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18CABD511CEDF23C0066955F /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		18CABD591CEDF9C70066955F /* XYVals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CABD581CEDF9C70066955F /* XYVals.swift */; };
 		18F0A2BF1CE76C63006FD12F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0A2BE1CE76C63006FD12F /* Constants.swift */; };
 		18F0A2C11CE76F0D006FD12F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0A2C01CE76F0D006FD12F /* Error.swift */; };
 		18F0A2C31CE774BC006FD12F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0A2C21CE774BC006FD12F /* HistoryViewController.swift */; };
+		6DCE5CD054E9FB7F4D8DAFD1 /* Pods_TrainSpeedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED53186FB55FCE1A5213DEE /* Pods_TrainSpeedTests.framework */; };
+		D0C5C6E7CFF7032B886C67CD /* Pods_TrainSpeedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A4693754FFDE6C5EAB18B7 /* Pods_TrainSpeedUITests.framework */; };
+		E472CBCEE367D7035AA42DE4 /* Pods_TrainSpeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E50D7964F56180C0C1708C5 /* Pods_TrainSpeed.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,41 +46,6 @@
 			remoteGlobalIDString = 1806D2AA1CD976CF0015A5DF;
 			remoteInfo = TrainSpeed;
 		};
-		18CABD4C1CEDF23C0066955F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 18CABD451CEDF23C0066955F /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
-			remoteInfo = "Charts-iOS";
-		};
-		18CABD4E1CEDF23C0066955F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 18CABD451CEDF23C0066955F /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
-			remoteInfo = "Charts-TV";
-		};
-		18CABD501CEDF23C0066955F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 18CABD451CEDF23C0066955F /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 65B3F5BF1C7370BE000983D0;
-			remoteInfo = "Charts-OSX";
-		};
-		18CABD521CEDF23C0066955F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 18CABD451CEDF23C0066955F /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
-			remoteInfo = ChartsTests;
-		};
-		18CABD561CEDF2790066955F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 18CABD451CEDF23C0066955F /* Charts.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 65B3F5BE1C7370BE000983D0;
-			remoteInfo = "Charts-OSX";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -89,7 +55,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				18CABD551CEDF2790066955F /* Charts.framework in Embed Frameworks */,
 				18CABD431CEDF15A0066955F /* RealmSwift.framework in Embed Frameworks */,
 				18CABD411CEDF15A0066955F /* Realm.framework in Embed Frameworks */,
 			);
@@ -99,6 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		090B8C22667F001F2B623576 /* Pods-TrainSpeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeed/Pods-TrainSpeed.debug.xcconfig"; sourceTree = "<group>"; };
 		1806D2AB1CD976CF0015A5DF /* TrainSpeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainSpeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1806D2AE1CD976CF0015A5DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1806D2B01CD976CF0015A5DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,11 +84,18 @@
 		18AE0B041CDEA3E500A902DD /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		18CABD3C1CEDF13F0066955F /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		18CABD3D1CEDF13F0066955F /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
-		18CABD451CEDF23C0066955F /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../../../../../../Downloads/Charts/Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		18CABD581CEDF9C70066955F /* XYVals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYVals.swift; sourceTree = "<group>"; };
 		18F0A2BE1CE76C63006FD12F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		18F0A2C01CE76F0D006FD12F /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		18F0A2C21CE774BC006FD12F /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		3C465DF353D1B21D0197A072 /* Pods-TrainSpeedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeedTests/Pods-TrainSpeedTests.debug.xcconfig"; sourceTree = "<group>"; };
+		66A4693754FFDE6C5EAB18B7 /* Pods_TrainSpeedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainSpeedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		718920618B8B956C9B53011B /* Pods-TrainSpeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeed/Pods-TrainSpeed.release.xcconfig"; sourceTree = "<group>"; };
+		77D482B43DD5DFEAEAD81D07 /* Pods-TrainSpeedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeedUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeedUITests/Pods-TrainSpeedUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8F597B0517AB13975FDD39E1 /* Pods-TrainSpeedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeedUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeedUITests/Pods-TrainSpeedUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9E50D7964F56180C0C1708C5 /* Pods_TrainSpeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainSpeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2CF5B729C4176DCF4E9B908 /* Pods-TrainSpeedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeedTests/Pods-TrainSpeedTests.release.xcconfig"; sourceTree = "<group>"; };
+		EED53186FB55FCE1A5213DEE /* Pods_TrainSpeedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainSpeedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,9 +103,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18CABD541CEDF2790066955F /* Charts.framework in Frameworks */,
 				18CABD401CEDF15A0066955F /* Realm.framework in Frameworks */,
 				18CABD3F1CEDF13F0066955F /* RealmSwift.framework in Frameworks */,
+				E472CBCEE367D7035AA42DE4 /* Pods_TrainSpeed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DCE5CD054E9FB7F4D8DAFD1 /* Pods_TrainSpeedTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C5C6E7CFF7032B886C67CD /* Pods_TrainSpeedUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +136,7 @@
 				1806D2CA1CD976D00015A5DF /* TrainSpeedUITests */,
 				1806D2AC1CD976CF0015A5DF /* Products */,
 				607AD0D5E630381B123CCB91 /* Frameworks */,
+				60261C54D3117B63D06B3DFD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,23 +189,27 @@
 			path = TrainSpeedUITests;
 			sourceTree = "<group>";
 		};
-		18CABD461CEDF23C0066955F /* Products */ = {
+		60261C54D3117B63D06B3DFD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				18CABD4D1CEDF23C0066955F /* Charts.framework */,
-				18CABD4F1CEDF23C0066955F /* Charts.framework */,
-				18CABD511CEDF23C0066955F /* Charts.framework */,
-				18CABD531CEDF23C0066955F /* ChartsTests.xctest */,
+				090B8C22667F001F2B623576 /* Pods-TrainSpeed.debug.xcconfig */,
+				718920618B8B956C9B53011B /* Pods-TrainSpeed.release.xcconfig */,
+				3C465DF353D1B21D0197A072 /* Pods-TrainSpeedTests.debug.xcconfig */,
+				B2CF5B729C4176DCF4E9B908 /* Pods-TrainSpeedTests.release.xcconfig */,
+				77D482B43DD5DFEAEAD81D07 /* Pods-TrainSpeedUITests.debug.xcconfig */,
+				8F597B0517AB13975FDD39E1 /* Pods-TrainSpeedUITests.release.xcconfig */,
 			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		607AD0D5E630381B123CCB91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				18CABD451CEDF23C0066955F /* Charts.xcodeproj */,
 				18CABD3C1CEDF13F0066955F /* Realm.framework */,
 				18CABD3D1CEDF13F0066955F /* RealmSwift.framework */,
+				9E50D7964F56180C0C1708C5 /* Pods_TrainSpeed.framework */,
+				EED53186FB55FCE1A5213DEE /* Pods_TrainSpeedTests.framework */,
+				66A4693754FFDE6C5EAB18B7 /* Pods_TrainSpeedUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -241,15 +221,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1806D2D01CD976D00015A5DF /* Build configuration list for PBXNativeTarget "TrainSpeed" */;
 			buildPhases = (
+				F1374E0D141CFE2D1E8E24B5 /* 📦 Check Pods Manifest.lock */,
 				1806D2A71CD976CF0015A5DF /* Sources */,
 				1806D2A81CD976CF0015A5DF /* Frameworks */,
 				1806D2A91CD976CF0015A5DF /* Resources */,
 				18CABD441CEDF15A0066955F /* Embed Frameworks */,
+				CF5C13BB3C9D60A245FE4228 /* 📦 Embed Pods Frameworks */,
+				1B7E716A8E400295BBCC029A /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				18CABD571CEDF2790066955F /* PBXTargetDependency */,
 			);
 			name = TrainSpeed;
 			productName = TrainSpeed;
@@ -331,12 +313,6 @@
 			mainGroup = 1806D2A21CD976CE0015A5DF;
 			productRefGroup = 1806D2AC1CD976CF0015A5DF /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 18CABD461CEDF23C0066955F /* Products */;
-					ProjectRef = 18CABD451CEDF23C0066955F /* Charts.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				1806D2AA1CD976CF0015A5DF /* TrainSpeed */,
@@ -345,37 +321,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		18CABD4D1CEDF23C0066955F /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 18CABD4C1CEDF23C0066955F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		18CABD4F1CEDF23C0066955F /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 18CABD4E1CEDF23C0066955F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		18CABD511CEDF23C0066955F /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 18CABD501CEDF23C0066955F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		18CABD531CEDF23C0066955F /* ChartsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ChartsTests.xctest;
-			remoteRef = 18CABD521CEDF23C0066955F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1806D2A91CD976CF0015A5DF /* Resources */ = {
@@ -405,6 +350,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1B7E716A8E400295BBCC029A /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainSpeed/Pods-TrainSpeed-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2BE2A2818A6007153A66238B /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -435,6 +395,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		CF5C13BB3C9D60A245FE4228 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainSpeed/Pods-TrainSpeed-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D929F884103B8F0E367C4819 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -463,6 +438,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainSpeedUITests/Pods-TrainSpeedUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1374E0D141CFE2D1E8E24B5 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FA493F303D134971C0219465 /* 📦 Check Pods Manifest.lock */ = {
@@ -528,11 +518,6 @@
 			isa = PBXTargetDependency;
 			target = 1806D2AA1CD976CF0015A5DF /* TrainSpeed */;
 			targetProxy = 1806D2C81CD976D00015A5DF /* PBXContainerItemProxy */;
-		};
-		18CABD571CEDF2790066955F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Charts-OSX";
-			targetProxy = 18CABD561CEDF2790066955F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -632,6 +617,7 @@
 		};
 		1806D2D11CD976D00015A5DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 090B8C22667F001F2B623576 /* Pods-TrainSpeed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -649,6 +635,7 @@
 		};
 		1806D2D21CD976D00015A5DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 718920618B8B956C9B53011B /* Pods-TrainSpeed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -666,6 +653,7 @@
 		};
 		1806D2D41CD976D00015A5DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C465DF353D1B21D0197A072 /* Pods-TrainSpeedTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -679,6 +667,7 @@
 		};
 		1806D2D51CD976D00015A5DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2CF5B729C4176DCF4E9B908 /* Pods-TrainSpeedTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -692,6 +681,7 @@
 		};
 		1806D2D71CD976D00015A5DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77D482B43DD5DFEAEAD81D07 /* Pods-TrainSpeedUITests.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TrainSpeedUITests/Info.plist;
@@ -704,6 +694,7 @@
 		};
 		1806D2D81CD976D00015A5DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F597B0517AB13975FDD39E1 /* Pods-TrainSpeedUITests.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TrainSpeedUITests/Info.plist;
