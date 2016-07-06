@@ -55,4 +55,19 @@ class DataSource {
             realm.add(realmItem)
         }
     }
+    
+    func removeFromRealm(vehicleId: String){
+        let predicate = NSPredicate(format: "vehicleRef = %@", vehicleId)
+        let allWithId = realm.objects(VehicleDatapoint).filter(predicate)
+        
+        try! realm.write{
+            realm.delete(allWithId)
+        }
+    }
+    
+    func readForId(vehicleId: String) -> Results<VehicleDatapoint>{
+        let predicate = NSPredicate(format: "vehicleRef = %@", vehicleId)
+        let results = realm.objects(VehicleDatapoint).filter(predicate).sorted("timestampRaw")
+        return results
+    }
 }

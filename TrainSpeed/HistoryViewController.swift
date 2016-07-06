@@ -15,6 +15,10 @@ class HistoryViewController : NSViewController{
     @IBOutlet weak var lineChartView: LineChartView!
     var vehicleId: String?
     
+    @IBAction func clearHistoryClicked(sender: AnyObject) {
+        DataSource().removeFromRealm(vehicleId!)
+        setChartData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +44,7 @@ class HistoryViewController : NSViewController{
     }
     
     func getChartXYVals() -> XYVals{
-        let realm = try! Realm()
-        let predicate = NSPredicate(format: "vehicleRef = %@", vehicleId!)
-        
-        let results = realm.objects(VehicleDatapoint).filter(predicate).sorted("timestampRaw")
+        let results = DataSource().readForId(vehicleId!)
         
         var dataEntries: Array<ChartDataEntry> = []
         var xVals: Array<String> = []

@@ -779,7 +779,6 @@
                         <outlet property="currentTrainTextField" destination="7kx-zb-JYL" id="Ocm-Ln-MMq"/>
                         <outlet property="networkSpinner" destination="Obh-z0-L7h" id="85p-dh-Ck6"/>
                         <outlet property="stopUpdatingButton" destination="LOm-QD-TBM" id="EhH-fW-G7K"/>
-                        <outlet property="trainInfoScrollView" destination="hvk-nV-ya1" id="oiX-mn-PNo"/>
                         <outlet property="trainInfoTextView" destination="hvk-nV-ya1" id="xMS-aV-khg"/>
                     </connections>
                 </viewController>
@@ -796,14 +795,26 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="hab-rf-U8u" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <rect key="frame" x="0.0" y="61" width="450" height="239"/>
                             </customView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3tn-qJ-VIe">
+                                <rect key="frame" x="14" y="13" width="117" height="32"/>
+                                <buttonCell key="cell" type="push" title="Clear history" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2Y9-Cy-uYt">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="clearHistoryClicked:" target="drc-Cn-iHC" id="Q1C-CT-5iz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3tn-qJ-VIe" secondAttribute="bottom" constant="20" symbolic="YES" id="1Ea-gI-eOd"/>
                             <constraint firstItem="hab-rf-U8u" firstAttribute="top" secondItem="5ee-fe-kaR" secondAttribute="top" id="3eu-M3-m6e"/>
                             <constraint firstItem="hab-rf-U8u" firstAttribute="leading" secondItem="5ee-fe-kaR" secondAttribute="leading" id="47r-yN-KFP"/>
+                            <constraint firstItem="3tn-qJ-VIe" firstAttribute="leading" secondItem="5ee-fe-kaR" secondAttribute="leading" constant="20" symbolic="YES" id="KWS-yt-da9"/>
+                            <constraint firstItem="3tn-qJ-VIe" firstAttribute="top" secondItem="hab-rf-U8u" secondAttribute="bottom" constant="20" symbolic="YES" id="QKW-VT-uPt"/>
                             <constraint firstAttribute="trailing" secondItem="hab-rf-U8u" secondAttribute="trailing" id="abT-5h-U78"/>
-                            <constraint firstAttribute="bottom" secondItem="hab-rf-U8u" secondAttribute="bottom" id="hcy-g3-Dvx"/>
                         </constraints>
                     </view>
                     <connections>
