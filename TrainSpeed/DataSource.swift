@@ -14,17 +14,17 @@ class DataSource {
     let realm = try! Realm()
     let parser = XMLParser()
     
-    func getVehicleDatapoint(vehicleID:String, callback:(VehicleDatapoint, Error?) -> Void) -> Void{
-        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration());
+    func getVehicleDatapoint(_ vehicleID:String, callback:@escaping (VehicleDatapoint, Error?) -> Void) -> Void{
+        let session = URLSession(configuration: URLSessionConfiguration.default);
 
         let url = buildUrl(vehicleID)
-        let dataTask = session.dataTaskWithURL(url){data, response, error in
+        let dataTask = session.dataTask(with: url, completionHandler: {data, response, error in
             if let error = error{
                 print(error.localizedDescription)
             }
-            else if let httpResponse = response as? NSHTTPURLResponse {
+            else if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode == 200 {
-                    dispatch_async(dispatch_get_main_queue()){ //Execute the callback on the main thread
+                    DispatchQueue.main.async{ //Execute the callback on the main thread
                         if let vehicleDatapoint = self.parser.parseVehicleDatapoint(data!){
                             if(vehicleDatapoint.isValidDatapoint()){
                                 self.addToRealm(vehicleDatapoint) //Should this be on the main thread? If performance problems, execute this in the background as well.
@@ -40,34 +40,34 @@ class DataSource {
                     }
                 }
             }
-        }
+        })
         dataTask.resume()
     }
     
-    func buildUrl(vehicleID: String) -> NSURL{
+    func buildUrl(_ vehicleID: String) -> URL{
         let fullString = baseUrl + "&vehicle=\(vehicleID)";
-        let url = NSURL(string: fullString);
+        let url = URL(string: fullString);
         return url!;
     }
     
-    func addToRealm(realmItem : Object) -> Void{
+    func addToRealm(_ realmItem : Object) -> Void{
         try! realm.write{
             realm.add(realmItem)
         }
     }
     
-    func removeFromRealm(vehicleId: String){
+    func removeFromRealm(_ vehicleId: String){
         let predicate = NSPredicate(format: "vehicleRef = %@", vehicleId)
-        let allWithId = realm.objects(VehicleDatapoint).filter(predicate)
+        let allWithId = realm.objects(VehicleDatapoint.self).filter(predicate)
         
         try! realm.write{
             realm.delete(allWithId)
         }
     }
     
-    func readForId(vehicleId: String) -> Results<VehicleDatapoint>{
+    func readForId(_ vehicleId: String) -> Results<VehicleDatapoint>{
         let predicate = NSPredicate(format: "vehicleRef = %@", vehicleId)
-        let results = realm.objects(VehicleDatapoint).filter(predicate).sorted("timestampRaw")
+        let results = realm.objects(VehicleDatapoint.self).filter(predicate).sorted(byProperty: "timestampRaw")
         return results
     }
 }

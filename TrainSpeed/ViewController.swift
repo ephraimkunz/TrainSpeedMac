@@ -13,7 +13,7 @@ class ViewController: NSViewController {
     var trainId = "";
     let dataSource = DataSource();
     var datapoint = VehicleDatapoint()
-    var timer = NSTimer()
+    var timer = Timer()
 
     @IBOutlet weak var stopUpdatingButton: NSButtonCell!
     @IBOutlet weak var currentTrainTextField: NSTextField!
@@ -25,9 +25,9 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        networkSpinner.displayedWhenStopped = false
+        networkSpinner.isDisplayedWhenStopped = false
         print("Realm configuration path: \(Realm.Configuration.defaultConfiguration.fileURL!)")
-        stopUpdatingButton.enabled = false
+        stopUpdatingButton.isEnabled = false
     }
     
     override func viewDidAppear() {
@@ -35,14 +35,14 @@ class ViewController: NSViewController {
         self.view.window!.title = "TrainSpeed - Ephraim Kunz"
     }
     
-    override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         if(segue.identifier == "toHistoryViewController"){
             let hist = segue.destinationController as! HistoryViewController
             hist.vehicleId = trainId
         }
     }
 
-    @IBAction func currentTrainChanged(sender: AnyObject) {
+    @IBAction func currentTrainChanged(_ sender: AnyObject) {
         if let textField = sender as? NSTextField{
             self.trainId = textField.stringValue
         }
@@ -62,17 +62,17 @@ class ViewController: NSViewController {
                     self.trainInfoTextView.string = "\(datapoint.publishedLineName) - \(datapoint.speed) mph"
                     
                     //Set up the auto refresh timer
-                    self.timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: #selector(ViewController.currentTrainChanged(_:)), userInfo: nil, repeats: false)
-                    self.stopUpdatingButton.enabled = true
+                    self.timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(ViewController.currentTrainChanged(_:)), userInfo: nil, repeats: false)
+                    self.stopUpdatingButton.isEnabled = true
                     
                 }
             }
         }
     }
 
-    @IBAction func stopUpdatingTapped(sender: AnyObject) {
+    @IBAction func stopUpdatingTapped(_ sender: AnyObject) {
         self.timer.invalidate()
-        self.stopUpdatingButton.enabled = false
+        self.stopUpdatingButton.isEnabled = false
     }
 }
 

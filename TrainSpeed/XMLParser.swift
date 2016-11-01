@@ -8,14 +8,14 @@
 
 import Foundation
 
-class XMLParser : NSObject, NSXMLParserDelegate {
+class XMLParser : NSObject, XMLParserDelegate {
     var insideItem = false
     var currentParseElement = String()
     var datapoint : VehicleDatapoint?
     var location : Location?
     
-    func parseVehicleDatapoint(data : NSData) -> VehicleDatapoint?{
-        let parser = NSXMLParser(data: data)
+    func parseVehicleDatapoint(_ data : Data) -> VehicleDatapoint?{
+        let parser = Foundation.XMLParser(data: data)
         parser.delegate = self
         datapoint = VehicleDatapoint()
         location = Location()
@@ -27,11 +27,11 @@ class XMLParser : NSObject, NSXMLParserDelegate {
     }
     
     // MARK: Delegate methods
-    @objc func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]){
+    @objc func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]){
         currentParseElement = elementName
     }
     
-    @objc func parser(parser: NSXMLParser, foundCharacters string: String){
+    @objc func parser(_ parser: XMLParser, foundCharacters string: String){
         switch currentParseElement {
         case "ResponseTimestamp":
             datapoint?.timestamp = parseDateFromString(string)
@@ -80,11 +80,11 @@ class XMLParser : NSObject, NSXMLParserDelegate {
         }
     }
     
-    @objc func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?){
+    @objc func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?){
         
     }
     
-    func parseDateFromString(string:String) -> NSDate{
-        return NSDate()
+    func parseDateFromString(_ string:String) -> Date{
+        return Date()
     }
 }

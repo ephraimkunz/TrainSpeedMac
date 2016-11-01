@@ -13,22 +13,20 @@
 		1806D2B61CD976CF0015A5DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1806D2B41CD976CF0015A5DF /* Main.storyboard */; };
 		1806D2C11CD976D00015A5DF /* TrainSpeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1806D2C01CD976D00015A5DF /* TrainSpeedTests.swift */; };
 		1806D2CC1CD976D00015A5DF /* TrainSpeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1806D2CB1CD976D00015A5DF /* TrainSpeedUITests.swift */; };
+		183A93981DC832AE00D80621 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A93961DC832AE00D80621 /* Realm.framework */; };
+		183A93991DC832AE00D80621 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 183A93961DC832AE00D80621 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		183A939A1DC832AE00D80621 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183A93971DC832AE00D80621 /* RealmSwift.framework */; };
+		183A939B1DC832AE00D80621 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 183A93971DC832AE00D80621 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		188AF6E11CD99703007AB09B /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188AF6E01CD99703007AB09B /* DataSource.swift */; };
 		188AF6E31CDA3228007AB09B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 188AF6E21CDA3228007AB09B /* Localizable.strings */; };
 		18AE0B011CDE9E3800A902DD /* VehicleDatapoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE0B001CDE9E3800A902DD /* VehicleDatapoint.swift */; };
 		18AE0B031CDEA10200A902DD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE0B021CDEA10200A902DD /* Location.swift */; };
 		18AE0B051CDEA3E500A902DD /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE0B041CDEA3E500A902DD /* XMLParser.swift */; };
-		18CABD3F1CEDF13F0066955F /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CABD3D1CEDF13F0066955F /* RealmSwift.framework */; };
-		18CABD401CEDF15A0066955F /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CABD3C1CEDF13F0066955F /* Realm.framework */; };
-		18CABD411CEDF15A0066955F /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18CABD3C1CEDF13F0066955F /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18CABD431CEDF15A0066955F /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18CABD3D1CEDF13F0066955F /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		18CABD591CEDF9C70066955F /* XYVals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CABD581CEDF9C70066955F /* XYVals.swift */; };
 		18F0A2BF1CE76C63006FD12F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0A2BE1CE76C63006FD12F /* Constants.swift */; };
 		18F0A2C11CE76F0D006FD12F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0A2C01CE76F0D006FD12F /* Error.swift */; };
 		18F0A2C31CE774BC006FD12F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0A2C21CE774BC006FD12F /* HistoryViewController.swift */; };
-		6DCE5CD054E9FB7F4D8DAFD1 /* Pods_TrainSpeedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED53186FB55FCE1A5213DEE /* Pods_TrainSpeedTests.framework */; };
-		D0C5C6E7CFF7032B886C67CD /* Pods_TrainSpeedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A4693754FFDE6C5EAB18B7 /* Pods_TrainSpeedUITests.framework */; };
-		E472CBCEE367D7035AA42DE4 /* Pods_TrainSpeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E50D7964F56180C0C1708C5 /* Pods_TrainSpeed.framework */; };
+		19C35D21ECE7DF0BAC3F8CDB /* Pods_TrainSpeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A27EF1089F220B4FD1024C2 /* Pods_TrainSpeed.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,14 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		18CABD441CEDF15A0066955F /* Embed Frameworks */ = {
+		183A939C1DC832AE00D80621 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				18CABD431CEDF15A0066955F /* RealmSwift.framework in Embed Frameworks */,
-				18CABD411CEDF15A0066955F /* Realm.framework in Embed Frameworks */,
+				183A939B1DC832AE00D80621 /* RealmSwift.framework in Embed Frameworks */,
+				183A93991DC832AE00D80621 /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,7 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		090B8C22667F001F2B623576 /* Pods-TrainSpeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeed/Pods-TrainSpeed.debug.xcconfig"; sourceTree = "<group>"; };
+		02A66BFF4CD41C36716A351A /* Pods-TrainSpeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeed/Pods-TrainSpeed.debug.xcconfig"; sourceTree = "<group>"; };
 		1806D2AB1CD976CF0015A5DF /* TrainSpeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainSpeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1806D2AE1CD976CF0015A5DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1806D2B01CD976CF0015A5DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +75,8 @@
 		1806D2C71CD976D00015A5DF /* TrainSpeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainSpeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1806D2CB1CD976D00015A5DF /* TrainSpeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainSpeedUITests.swift; sourceTree = "<group>"; };
 		1806D2CD1CD976D00015A5DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		183A93961DC832AE00D80621 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		183A93971DC832AE00D80621 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		188AF6E01CD99703007AB09B /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		188AF6E21CDA3228007AB09B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		18AE0B001CDE9E3800A902DD /* VehicleDatapoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleDatapoint.swift; sourceTree = "<group>"; };
@@ -88,14 +88,8 @@
 		18F0A2BE1CE76C63006FD12F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		18F0A2C01CE76F0D006FD12F /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		18F0A2C21CE774BC006FD12F /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		3C465DF353D1B21D0197A072 /* Pods-TrainSpeedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeedTests/Pods-TrainSpeedTests.debug.xcconfig"; sourceTree = "<group>"; };
-		66A4693754FFDE6C5EAB18B7 /* Pods_TrainSpeedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainSpeedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		718920618B8B956C9B53011B /* Pods-TrainSpeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeed/Pods-TrainSpeed.release.xcconfig"; sourceTree = "<group>"; };
-		77D482B43DD5DFEAEAD81D07 /* Pods-TrainSpeedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeedUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeedUITests/Pods-TrainSpeedUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8F597B0517AB13975FDD39E1 /* Pods-TrainSpeedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeedUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeedUITests/Pods-TrainSpeedUITests.release.xcconfig"; sourceTree = "<group>"; };
-		9E50D7964F56180C0C1708C5 /* Pods_TrainSpeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainSpeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2CF5B729C4176DCF4E9B908 /* Pods-TrainSpeedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeedTests/Pods-TrainSpeedTests.release.xcconfig"; sourceTree = "<group>"; };
-		EED53186FB55FCE1A5213DEE /* Pods_TrainSpeedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainSpeedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A27EF1089F220B4FD1024C2 /* Pods_TrainSpeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainSpeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BEF61B60E3437ABB33A496C /* Pods-TrainSpeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpeed/Pods-TrainSpeed.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +97,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18CABD401CEDF15A0066955F /* Realm.framework in Frameworks */,
-				18CABD3F1CEDF13F0066955F /* RealmSwift.framework in Frameworks */,
-				E472CBCEE367D7035AA42DE4 /* Pods_TrainSpeed.framework in Frameworks */,
+				183A93981DC832AE00D80621 /* Realm.framework in Frameworks */,
+				19C35D21ECE7DF0BAC3F8CDB /* Pods_TrainSpeed.framework in Frameworks */,
+				183A939A1DC832AE00D80621 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +107,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DCE5CD054E9FB7F4D8DAFD1 /* Pods_TrainSpeedTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +114,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0C5C6E7CFF7032B886C67CD /* Pods_TrainSpeedUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,12 +123,14 @@
 		1806D2A21CD976CE0015A5DF = {
 			isa = PBXGroup;
 			children = (
+				183A93961DC832AE00D80621 /* Realm.framework */,
+				183A93971DC832AE00D80621 /* RealmSwift.framework */,
 				1806D2AD1CD976CF0015A5DF /* TrainSpeed */,
 				1806D2BF1CD976D00015A5DF /* TrainSpeedTests */,
 				1806D2CA1CD976D00015A5DF /* TrainSpeedUITests */,
 				1806D2AC1CD976CF0015A5DF /* Products */,
 				607AD0D5E630381B123CCB91 /* Frameworks */,
-				60261C54D3117B63D06B3DFD /* Pods */,
+				E64C6ABB8734B42C7A2CE726 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,29 +183,23 @@
 			path = TrainSpeedUITests;
 			sourceTree = "<group>";
 		};
-		60261C54D3117B63D06B3DFD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				090B8C22667F001F2B623576 /* Pods-TrainSpeed.debug.xcconfig */,
-				718920618B8B956C9B53011B /* Pods-TrainSpeed.release.xcconfig */,
-				3C465DF353D1B21D0197A072 /* Pods-TrainSpeedTests.debug.xcconfig */,
-				B2CF5B729C4176DCF4E9B908 /* Pods-TrainSpeedTests.release.xcconfig */,
-				77D482B43DD5DFEAEAD81D07 /* Pods-TrainSpeedUITests.debug.xcconfig */,
-				8F597B0517AB13975FDD39E1 /* Pods-TrainSpeedUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		607AD0D5E630381B123CCB91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				18CABD3C1CEDF13F0066955F /* Realm.framework */,
 				18CABD3D1CEDF13F0066955F /* RealmSwift.framework */,
-				9E50D7964F56180C0C1708C5 /* Pods_TrainSpeed.framework */,
-				EED53186FB55FCE1A5213DEE /* Pods_TrainSpeedTests.framework */,
-				66A4693754FFDE6C5EAB18B7 /* Pods_TrainSpeedUITests.framework */,
+				3A27EF1089F220B4FD1024C2 /* Pods_TrainSpeed.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E64C6ABB8734B42C7A2CE726 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02A66BFF4CD41C36716A351A /* Pods-TrainSpeed.debug.xcconfig */,
+				5BEF61B60E3437ABB33A496C /* Pods-TrainSpeed.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,13 +209,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1806D2D01CD976D00015A5DF /* Build configuration list for PBXNativeTarget "TrainSpeed" */;
 			buildPhases = (
-				F1374E0D141CFE2D1E8E24B5 /* 📦 Check Pods Manifest.lock */,
+				B60D213FF1E2B49AB76B373D /* 📦 Check Pods Manifest.lock */,
 				1806D2A71CD976CF0015A5DF /* Sources */,
 				1806D2A81CD976CF0015A5DF /* Frameworks */,
 				1806D2A91CD976CF0015A5DF /* Resources */,
-				18CABD441CEDF15A0066955F /* Embed Frameworks */,
-				CF5C13BB3C9D60A245FE4228 /* 📦 Embed Pods Frameworks */,
-				1B7E716A8E400295BBCC029A /* 📦 Copy Pods Resources */,
+				7C92A42CDA378436C9E474FA /* 📦 Embed Pods Frameworks */,
+				FBC33609414A1918B3BAA3B1 /* 📦 Copy Pods Resources */,
+				183A939C1DC832AE00D80621 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -242,12 +230,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1806D2D31CD976D00015A5DF /* Build configuration list for PBXNativeTarget "TrainSpeedTests" */;
 			buildPhases = (
-				FA493F303D134971C0219465 /* 📦 Check Pods Manifest.lock */,
 				1806D2B81CD976D00015A5DF /* Sources */,
 				1806D2B91CD976D00015A5DF /* Frameworks */,
 				1806D2BA1CD976D00015A5DF /* Resources */,
-				D929F884103B8F0E367C4819 /* 📦 Embed Pods Frameworks */,
-				2BE2A2818A6007153A66238B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,11 +248,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1806D2D61CD976D00015A5DF /* Build configuration list for PBXNativeTarget "TrainSpeedUITests" */;
 			buildPhases = (
-				59FB10942B896BB676ABFBDF /* 📦 Check Pods Manifest.lock */,
 				1806D2C31CD976D00015A5DF /* Sources */,
 				1806D2C41CD976D00015A5DF /* Frameworks */,
 				1806D2C51CD976D00015A5DF /* Resources */,
-				E59BC71EFED6C003C173B7B4 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -286,18 +269,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Ephraim Kunz";
 				TargetAttributes = {
 					1806D2AA1CD976CF0015A5DF = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 					};
 					1806D2BB1CD976D00015A5DF = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 						TestTargetID = 1806D2AA1CD976CF0015A5DF;
 					};
 					1806D2C61CD976D00015A5DF = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 						TestTargetID = 1806D2AA1CD976CF0015A5DF;
 					};
 				};
@@ -350,52 +336,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1B7E716A8E400295BBCC029A /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainSpeed/Pods-TrainSpeed-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2BE2A2818A6007153A66238B /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainSpeedTests/Pods-TrainSpeedTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		59FB10942B896BB676ABFBDF /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CF5C13BB3C9D60A245FE4228 /* 📦 Embed Pods Frameworks */ = {
+		7C92A42CDA378436C9E474FA /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -410,22 +351,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainSpeed/Pods-TrainSpeed-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D929F884103B8F0E367C4819 /* 📦 Embed Pods Frameworks */ = {
+		B60D213FF1E2B49AB76B373D /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainSpeedTests/Pods-TrainSpeedTests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E59BC71EFED6C003C173B7B4 /* 📦 Copy Pods Resources */ = {
+		FBC33609414A1918B3BAA3B1 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -437,37 +378,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainSpeedUITests/Pods-TrainSpeedUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F1374E0D141CFE2D1E8E24B5 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		FA493F303D134971C0219465 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainSpeed/Pods-TrainSpeed-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -547,8 +458,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -592,8 +505,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -612,16 +527,17 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
 		1806D2D11CD976D00015A5DF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 090B8C22667F001F2B623576 /* Pods-TrainSpeed.debug.xcconfig */;
+			baseConfigurationReference = 02A66BFF4CD41C36716A351A /* Pods-TrainSpeed.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -630,16 +546,17 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ephraimhowardkunz.TrainSpeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		1806D2D21CD976D00015A5DF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 718920618B8B956C9B53011B /* Pods-TrainSpeed.release.xcconfig */;
+			baseConfigurationReference = 5BEF61B60E3437ABB33A496C /* Pods-TrainSpeed.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -648,26 +565,30 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ephraimhowardkunz.TrainSpeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		1806D2D41CD976D00015A5DF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C465DF353D1B21D0197A072 /* Pods-TrainSpeedTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"/Users/apple/Documents/Post-mission/programming/App",
+					development/iOS/TrainSpeed,
+				);
 				INFOPLIST_FILE = TrainSpeedTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ephraimhowardkunz.TrainSpeedTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainSpeed.app/Contents/MacOS/TrainSpeed";
 			};
 			name = Debug;
 		};
 		1806D2D51CD976D00015A5DF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2CF5B729C4176DCF4E9B908 /* Pods-TrainSpeedTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -675,32 +596,33 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ephraimhowardkunz.TrainSpeedTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainSpeed.app/Contents/MacOS/TrainSpeed";
 			};
 			name = Release;
 		};
 		1806D2D71CD976D00015A5DF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77D482B43DD5DFEAEAD81D07 /* Pods-TrainSpeedUITests.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TrainSpeedUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ephraimhowardkunz.TrainSpeedUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = TrainSpeed;
 			};
 			name = Debug;
 		};
 		1806D2D81CD976D00015A5DF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F597B0517AB13975FDD39E1 /* Pods-TrainSpeedUITests.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TrainSpeedUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ephraimhowardkunz.TrainSpeedUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = TrainSpeed;
 			};
 			name = Release;

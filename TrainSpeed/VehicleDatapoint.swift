@@ -11,8 +11,8 @@ import RealmSwift
 
 class VehicleDatapoint : Object{
     
-    dynamic var timestamp = NSDate()
-    dynamic var validUntil = NSDate()
+    dynamic var timestamp = Date()
+    dynamic var validUntil = Date()
     dynamic var lineRef = ""
     dynamic var directionRef = ""
     dynamic var vehicleRef = ""

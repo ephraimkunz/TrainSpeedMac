@@ -7,14 +7,4 @@ target 'TrainSpeed' do
 
   # Pods for TrainSpeed
   pod 'Charts'
-  target 'TrainSpeedTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'TrainSpeedUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end
