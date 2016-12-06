@@ -8,7 +8,7 @@
 
 import Cocoa
 import Charts
-//import RealmSwift
+import RealmSwift
 
 class HistoryViewController : NSViewController{
     
@@ -37,9 +37,7 @@ class HistoryViewController : NSViewController{
         
         dataset.setCircleColor(NSUIColor.red)
         dataset.setColor(NSUIColor.red)
-        
-        let data = LineChartData(dataSet: dataset)
-        self.lineChartView.data = data
+        self.lineChartView.data = LineChartData(dataSet: dataset)
     }
     
     func getChartXYVals() -> XYVals{

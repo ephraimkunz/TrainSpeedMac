@@ -19,10 +19,13 @@ class ViewController: NSViewController {
     @IBOutlet weak var currentTrainTextField: NSTextField!
     @IBOutlet weak var networkSpinner: NSProgressIndicator!
     @IBOutlet var trainInfoTextView: NSTextView!
+    @IBOutlet weak var historyModalButton: NSButton!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        historyModalButton.isEnabled = false
 
         // Do any additional setup after loading the view.
         networkSpinner.isDisplayedWhenStopped = false
@@ -48,6 +51,7 @@ class ViewController: NSViewController {
         }
         
         if(trainId != ""){
+            historyModalButton.isEnabled = true
             networkSpinner.startAnimation(self)
             dataSource.getVehicleDatapoint(trainId){
                 (datapoint: VehicleDatapoint, error: Error?) in
@@ -67,6 +71,9 @@ class ViewController: NSViewController {
                     
                 }
             }
+        }
+        else{
+            historyModalButton.isEnabled = false
         }
     }
 

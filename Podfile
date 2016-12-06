@@ -6,5 +6,15 @@ target 'TrainSpeed' do
   use_frameworks!
 
   # Pods for TrainSpeed
-  pod 'Charts'
+	pod 'Charts'
+  target 'TrainSpeedTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'TrainSpeedUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
 end
