@@ -32,12 +32,22 @@ class HistoryViewController : NSViewController{
     
     func setChartData() -> Void{
         let xyVals = getChartXYVals()
-        let dataEntries: [ChartDataEntry] = xyVals.yDataEntries
+        let dataEntries = xyVals.yDataEntries
         let dataset = LineChartDataSet(values: dataEntries, label: "Speed")
-        
         dataset.setCircleColor(NSUIColor.red)
         dataset.setColor(NSUIColor.red)
-        self.lineChartView.data = LineChartData(dataSet: dataset)
+        let data = LineChartData();
+        data.addDataSet(dataset)
+        
+        // Get the x axis labels to display properly
+        let xAxis = XAxis()
+        let formatter = LineChartFormatter()
+        formatter.setValues(xyVals.xVals)
+        
+        xAxis.valueFormatter = formatter
+        
+        self.lineChartView.data = data
+        self.lineChartView.xAxis.valueFormatter = xAxis.valueFormatter
     }
     
     func getChartXYVals() -> XYVals{
@@ -46,7 +56,7 @@ class HistoryViewController : NSViewController{
         var dataEntries: Array<ChartDataEntry> = []
         var xVals: Array<String> = []
         for i in 0..<results.count{
-            let chartDataEntry = ChartDataEntry(x: results[i].speed, y: Double(i))
+            let chartDataEntry = ChartDataEntry(x:Double(i), y: results[i].speed)
             dataEntries.append(chartDataEntry)
             xVals.append(getGraphDateString(results[i].timestamp))
         }
@@ -65,5 +75,19 @@ class HistoryViewController : NSViewController{
     override internal func viewWillAppear()
     {
         self.lineChartView.animate(xAxisDuration: 0.0, yAxisDuration: 1.0)
+    }
+}
+
+class LineChartFormatter: NSObject, IAxisValueFormatter{
+    var names = [String]()
+    
+    public func stringForValue(_ value: Double, axis: AxisBase?) -> String
+    {
+        return names[Int(value)]
+    }
+    
+    public func setValues(_ values: [String])
+    {
+        self.names = values
     }
 }
