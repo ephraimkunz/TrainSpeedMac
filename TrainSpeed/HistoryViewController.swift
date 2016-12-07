@@ -37,7 +37,13 @@ class HistoryViewController : NSViewController{
         dataset.setCircleColor(NSUIColor.red)
         dataset.setColor(NSUIColor.red)
         let data = LineChartData();
-        data.addDataSet(dataset)
+        
+        //With an empty dataset iOS Charts will attempt to get elements, and throw exceptions when there are none.
+        //So we must not provide a dataset if that is the case.
+        if(!dataEntries.isEmpty){
+            data.addDataSet(dataset)
+
+        }
         
         // Get the x axis labels to display properly
         let xAxis = XAxis()
@@ -74,10 +80,17 @@ class HistoryViewController : NSViewController{
     
     override internal func viewWillAppear()
     {
+        invalidateAndAnimateChart()
+    }
+    
+    func invalidateAndAnimateChart(){
         self.lineChartView.animate(xAxisDuration: 0.0, yAxisDuration: 1.0)
     }
 }
 
+/**
+ Implements the IAxisValueFormatter protocol so we can supply custom x axis labels
+ */
 class LineChartFormatter: NSObject, IAxisValueFormatter{
     var names = [String]()
     
